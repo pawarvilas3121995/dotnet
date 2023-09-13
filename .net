@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        List<string> tasks = new List<string>();
+
+        while (true)
+        {
+            Console.WriteLine("Enter a task (or 'quit' to exit):");
+            string task = Console.ReadLine();
+
+            if (task.ToLower() == "quit")
+                break;
+
+            tasks.Add(task);
+        }
+
+        Console.WriteLine("\nTask List:");
+        foreach (string task in tasks)
+        {
+            Console.WriteLine(task);
+        }
+    }
+}
