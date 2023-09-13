@@ -1,0 +1,13 @@
+static void Main()
+{
+    const string validChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+";
+    Random random = new Random();
+
+    StringBuilder password = new StringBuilder();
+    for (int i = 0; i < 12; i++)
+    {
+        password.Append(validChars[random.Next(validChars.Length)]);
+    }
+
+    Console.WriteLine($"Generated Password: {password}");
+}
