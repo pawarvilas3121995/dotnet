@@ -9,11 +9,7 @@ public class SampleController : ControllerBase
         return Ok(data);
     }
 }
-File Downloader:
-
-Build an application that downloads files from a given URL.
-csharp
-Copy code
+ 
 static async Task Main()
 {
     string url = "https://example.com/samplefile.txt";
@@ -28,9 +24,6 @@ static async Task Main()
 
     Console.WriteLine("File downloaded successfully!");
 }
-Remember to create a new project in Visual Studio and replace the content of Program.cs with the provided code for each project. Feel free to customize and expand upon these ideas based on your interests and learning goals.
-
-
 
 
 
