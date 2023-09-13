@@ -1,0 +1,36 @@
+[ApiController]
+[Route("[controller]")]
+public class SampleController : ControllerBase
+{
+    [HttpGet]
+    public IActionResult Get()
+    {
+        var data = new { Message = "Hello, World!" };
+        return Ok(data);
+    }
+}
+File Downloader:
+
+Build an application that downloads files from a given URL.
+csharp
+Copy code
+static async Task Main()
+{
+    string url = "https://example.com/samplefile.txt";
+    string destinationPath = "downloadedfile.txt";
+
+    using (HttpClient client = new HttpClient())
+    {
+        HttpResponseMessage response = await client.GetAsync(url);
+        byte[] bytes = await response.Content.ReadAsByteArrayAsync();
+        await File.WriteAllBytesAsync(destinationPath, bytes);
+    }
+
+    Console.WriteLine("File downloaded successfully!");
+}
+Remember to create a new project in Visual Studio and replace the content of Program.cs with the provided code for each project. Feel free to customize and expand upon these ideas based on your interests and learning goals.
+
+
+
+
+
